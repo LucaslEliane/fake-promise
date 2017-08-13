@@ -146,6 +146,9 @@ const FPromise = (function() {
     });
   }
   
+  FPromise.prototype.catch = function(rejecter) {
+    return this.then(undefined, rejecter);
+  }
   // if (window.hasOwnProperty('Promise')) {
   //   window.FPromise = window.Promise;
   // } else if (window.hasOwnProperty('FPromise')) {
